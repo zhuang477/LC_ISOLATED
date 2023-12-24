@@ -10,33 +10,39 @@ public class ItemDatabase : MonoBehaviour
         BuildItemDatabase();
     }
 
-    public Item GetItem(int id){
+    public Item getItem(int id){
         return items.Find(item => item.id ==id);
     }
 
     void BuildItemDatabase(){
         items =new List<Item>(){
             //
-            new Item(0, "Gladiator_Sword", "Weapon","A Gladiator_Sword",
+            new Item(1, "Gladiator_Sword", "Weapon","A Gladiator_Sword",
             new Dictionary<string, int>{
-                {"Attack_Stanima",10},
-                {"Attack_Raw_Damage",50},
+                {"Attack_Stanima",10}
             },
             new Dictionary<string, string>{
                 {"Weapon Type","Sword"}
+            },
+            new Dictionary<string,double>{
+                {"Attack_Raw_Damage",50},
+                {"Attack_Against_Flesh",1.2},
+                {"Attack_Against_Armor",0.7}
             }),
             //
 
             //
-            new Item(1, "Gladiator_Armor_Flax", "Armor","A Gladiator armor made by flax",
+            new Item(2, "Gladiator_Armor_Flax", "Armor","A Gladiator armor made by flax",
             new Dictionary<string, int>{
                 {"Armor_Stanima_Cost",5},
-                {"Armor_Head",50},
-                {"Armor_Torso",10},
-                {"Armor_Leg",10}
             },
             new Dictionary<string, string>{
                 
+            },
+            new Dictionary<string,double>{
+                {"Armor_Head",50},
+                {"Armor_Torso",10},
+                {"Armor_Leg",10}
             }),
             //
 

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using System;
 using System.IO;
 using TMPro;
+using Unity.VisualScripting;
 
 public class MainMenu : MonoBehaviour
 {
@@ -14,7 +15,8 @@ public class MainMenu : MonoBehaviour
     string[] savingNames;
 
     public List<GameObject> buttons;
-    public GameManager gameManager;
+    public SceneLoader sceneLoader;
+    public GameObject itemDatabase;
 
     void Start(){
         //when the game starts, read the saving documents in advance.
@@ -58,16 +60,19 @@ public class MainMenu : MonoBehaviour
                 //1. create a new UserData file.
                 UserData newSave = new UserData
                 {
+                    evaluable =1,
                     saveName = inputField.text,
                     level = new List<int>(),
                     XP = 0,
                     hitpoint = 50,
                     stanima = 50,
 
-                    weapon_id = 0,
-                    armor_id = 1,
+                    weapon_id = 1,
+                    armor_id = 2,
 
-                    perks_unlocked = new List<int>()
+                    perks_unlocked = new List<int>(),
+                    backpack = new List<int>(10),
+                    debuff =new List<int>()
                 };
                 //2. convert the UserData file into JSON.
                 string JSONfile =JsonUtility.ToJson(newSave);
@@ -77,8 +82,10 @@ public class MainMenu : MonoBehaviour
                 string filePath = Path.Combine(gameSavingsFolderPath, fileName);
                 File.WriteAllText(filePath, JSONfile);
                     
-                //persist the data, enter the game(change scene)
-                gameManager.currentSaving =newSave;
+                //persist the data, keep itemdatabase running, enter the game(change scene)
+                GameManager.Instance.currentSaving =newSave;
+                DontDestroyOnLoad(itemDatabase);
+                sceneLoader.LoadTargetScene();
         }
     }
 

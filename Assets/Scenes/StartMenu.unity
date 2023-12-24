@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 160146894}
   - component: {fileID: 160146893}
+  - component: {fileID: 160146895}
   m_Layer: 5
   m_Name: Main Menu Manager
   m_TagString: Untagged
@@ -156,7 +157,8 @@ MonoBehaviour:
   buttons:
   - {fileID: 2094917951}
   - {fileID: 704602986}
-  gameManager: {fileID: 1448047075}
+  sceneLoader: {fileID: 160146895}
+  itemDatabase: {fileID: 1448047071}
 --- !u!224 &160146894
 RectTransform:
   m_ObjectHideFlags: 0
@@ -176,6 +178,19 @@ RectTransform:
   m_AnchoredPosition: {x: 960, y: 540}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &160146895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160146892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c20e64f9e8428b429b0328093fcf9c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetSceneName: Tutorial
 --- !u!1 &211619487
 GameObject:
   m_ObjectHideFlags: 0
@@ -1199,7 +1214,7 @@ GameObject:
   - component: {fileID: 1448047072}
   - component: {fileID: 1448047075}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: PersistData
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1241,20 +1256,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1448047071}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b321cfd3b53f63408f581fb48ae7a2f, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ad0c0f7f880a8a4cab210803433fb6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSaving:
-    saveName: 
-    level: 
-    XP: 0
-    hitpoint: 0
-    stanima: 0
-    actual_stanima: 0
-    weapon_id: 0
-    armor_id: 0
-    perks_unlocked: 
-    backpack: []
+  itemDatabase: {fileID: 1448047072}
 --- !u!1 &1761645472
 GameObject:
   m_ObjectHideFlags: 0
@@ -2028,6 +2033,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentSaving:
+    evaluable: 0
     saveName: 
     level: 
     XP: 0
@@ -2035,9 +2041,15 @@ MonoBehaviour:
     stanima: 0
     actual_stanima: 0
     weapon_id: 0
+    weapon_against_flesh: 0
+    weapon_against_armor: 0
     armor_id: 0
+    armor_head: 0
+    armor_torso: 0
+    armor_leg: 0
     perks_unlocked: 
-    backpack: []
+    backpack: 
+    debuff: 
 --- !u!4 &2113554644
 Transform:
   m_ObjectHideFlags: 0
