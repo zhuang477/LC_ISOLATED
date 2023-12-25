@@ -18,6 +18,11 @@ public class MainMenu : MonoBehaviour
     public SceneLoader sceneLoader;
     public GameObject itemDatabase;
 
+    //For Load interface.
+    public GameObject SaveView;
+    public Transform Content;
+    //
+
     void Start(){
         //when the game starts, read the saving documents in advance.
         string GameSavingPath =GetSavingPath();
@@ -63,6 +68,7 @@ public class MainMenu : MonoBehaviour
                     evaluable =1,
                     saveName = inputField.text,
                     level = new List<int>(),
+                    currentLevel =1,
                     XP = 0,
                     hitpoint = 50,
                     stanima = 50,
@@ -89,37 +95,27 @@ public class MainMenu : MonoBehaviour
         }
     }
 
-    /*
-    *
-                //no duplicate files.
-                else{
-                    //create a new save file.
-                    //1. create a new UserData file.
-                    UserData newSave = new UserData
-                    {
-                        saveName = inputField.text,
-                        level = new List<int>(),
-                        XP = 0,
-                        hitpoint = 50,
-                        stanima = 50,
+    public void LoadCampaign(){
+        // Path to the "LCI" folder
+        string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "My Games", "LCI");
+        // Get all files in the "LCI" folder
+        string[] saveFiles = Directory.GetFiles(folderPath, "*.json");
 
-                        weapon_id = 0,
-                        armor_id = 1,
+        foreach (string save in saveFiles){
+            GameObject InteractiveButton =Instantiate(SaveView, Content);
+            // Get a reference to the TMP component of the button's text
+            TextMeshProUGUI buttonText = InteractiveButton.GetComponentInChildren<TextMeshProUGUI>();
+            // Set the text of the TMP component to the name of the file (without extension)
+            buttonText.text = Path.GetFileNameWithoutExtension(save);
+        }
+    }
 
-                        perks_unlocked = new List<int>()
-                    };
-                    //2. convert the UserData file into JSON.
-                        string JSONfile =JsonUtility.ToJson(newSave);
-                        Debug.Log(JSONfile);
-                        //get the path to the "My Documents" folder.
-                        string documentsPath =Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                        //get the path to LCI document.
-                        string gameSavingsFolderPath =Path.Combine(documentsPath,"My Games",saveFolderName);
-                        File.WriteAllText(gameSavingsFolderPath,JSONfile);
-                    
-                    //persist the data, enter the game(change scene)
-                }
-    */
+    //Delete all InteractiveButton after exit to avoid duplicate save choice appeared.
+    public void Exit_Choose_Save(){
+        foreach(Transform child in Content){
+            Destroy(child.gameObject);
+        }
+    }
 
     public void QuitGame(){
         Application.Quit();

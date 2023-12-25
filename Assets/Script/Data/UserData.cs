@@ -16,6 +16,7 @@ public class UserData
 
     //the level that user unlocked
     public List<int> level; //when pass a boss, level will add to notify player is able to enter new level.
+    public int currentLevel; //where the player is.
 
     //the current XP.
     public int XP;
