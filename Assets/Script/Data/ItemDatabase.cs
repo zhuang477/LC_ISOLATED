@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class ItemDatabase : MonoBehaviour
 {
     public List<Item> items =new List<Item>();
-
     void Awake(){
         BuildItemDatabase();
     }
@@ -17,7 +17,8 @@ public class ItemDatabase : MonoBehaviour
     void BuildItemDatabase(){
         items =new List<Item>(){
             //
-            new Item(1, "Gladiator_Sword", "Weapon","A Gladiator_Sword",
+            new Item(1, "Gladiator_Sword",AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Asset/itemIcon/Gladiator_Sword_UI.png"),
+            "Weapon","A Gladiator_Sword",
             new Dictionary<string, int>{
                 {"Attack_Stanima",10}
             },
@@ -32,7 +33,8 @@ public class ItemDatabase : MonoBehaviour
             //
 
             //
-            new Item(2, "Gladiator_Armor_Flax", "Armor","A Gladiator armor made by flax",
+            new Item(2, "Gladiator_Armor_Flax",AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Asset/itemIcon/Gladiator_Armor_Flax_UI.png"), 
+            "Armor","A Gladiator armor made by flax",
             new Dictionary<string, int>{
                 {"Armor_Stanima_Cost",5},
             },
@@ -46,6 +48,36 @@ public class ItemDatabase : MonoBehaviour
             }),
             //
 
+            /**
+            new Item(1000,"Heroic", "Armor","You wear nothing, brave but risky",
+            new Dictionary<string, int>{
+                {"Armor_Stanima_Cost",0},
+            },
+            new Dictionary<string, string>{
+                
+            },
+            new Dictionary<string,double>{
+                {"Armor_Head",0},
+                {"Armor_Torso",0},
+                {"Armor_Leg",0}
+            }),
+            //
+            
+
+            //
+            new Item(999, "Fist", "Weapon","Your fist",
+            new Dictionary<string, int>{
+                {"Attack_Stanima",5}
+            },
+            new Dictionary<string, string>{
+                {"Weapon Type","Fist"}
+            },
+            new Dictionary<string,double>{
+                {"Attack_Raw_Damage",2},
+                {"Attack_Against_Flesh",1},
+                {"Attack_Against_Armor",0}
+            }),
+            */
         };
     }
 
