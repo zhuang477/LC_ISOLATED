@@ -3969,7 +3969,10 @@ MonoBehaviour:
     evaluable: 0
     saveName: 
     level: 
+    location: {x: 0, y: 0, z: 0}
     currentLevel: 0
+    nextLevel: 0
+    player_Avatar: {fileID: 0}
     XP: 0
     hitpoint: 0
     stanima: 0
@@ -3984,6 +3987,12 @@ MonoBehaviour:
     perks_unlocked: 
     backpack: 
     debuff: 
+  Player: {fileID: 0}
+  PlayerRB: {fileID: 0}
+  groundCheck: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!4 &2113554644
 Transform:
   m_ObjectHideFlags: 0
