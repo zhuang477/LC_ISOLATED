@@ -18,6 +18,7 @@ public class ItemDatabase : MonoBehaviour
         items =new List<Item>(){
             //
             new Item(1, "Gladiator_Sword",AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Asset/itemIcon/Gladiator_Sword_UI.png"),
+            AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Asset/Player/Inventory/PaperDoll/inv_model_1.png"),
             "Weapon","A Gladiator_Sword",
             new Dictionary<string, int>{
                 {"Attack_Stanima",10}
@@ -33,7 +34,8 @@ public class ItemDatabase : MonoBehaviour
             //
 
             //
-            new Item(2, "Gladiator_Armor_Flax",AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Asset/itemIcon/Gladiator_Armor_Flax_UI.png"), 
+            new Item(2, "Gladiator_Armor_Flax",AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Asset/itemIcon/Gladiator_Armor_Flax_UI.png"),
+            AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Asset/Player/Inventory//PaperDoll/inv_model_2.png"),
             "Armor","A Gladiator armor made by flax",
             new Dictionary<string, int>{
                 {"Armor_Stanima_Cost",5},

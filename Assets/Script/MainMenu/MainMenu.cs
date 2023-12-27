@@ -7,6 +7,7 @@ using System;
 using System.IO;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEditor;
 
 public class MainMenu : MonoBehaviour
 {
@@ -68,7 +69,8 @@ public class MainMenu : MonoBehaviour
                     evaluable =1,
                     saveName = inputField.text,
                     level = new List<int>(),
-                    currentLevel =1,
+                    //current level and nextlevel should be assign by individual scene script.
+                    player_Avatar =AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Asset/Player/Avatar/Player.png"),
                     XP = 0,
                     hitpoint = 50,
                     stanima = 50,

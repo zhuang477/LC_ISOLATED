@@ -16,7 +16,18 @@ public class UserData
 
     //the level that user unlocked
     public List<int> level; //when pass a boss, level will add to notify player is able to enter new level.
-    public int currentLevel; //where the player is.
+
+    
+    public Vector3 location; //Location should based on scene's individual script's assign.
+
+    //current level and nextlevel should be assign by individual scene script.
+    public int currentLevel; //where the player is, it is spawnpoint that player spawn in.
+    public int nextLevel; //where the player will spawn in the next scene.
+
+    //
+
+    //this will become IK in the future, now is Sprite only. It shows the player in the game(character).
+    public Sprite player_Avatar;
     
     //the current XP.
     public int XP;
