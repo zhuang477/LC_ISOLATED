@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
+using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -32,6 +34,14 @@ public class GameManager : MonoBehaviour
     private float speed =8f;
     private float jumpingPower =16f;
     private bool isFacingRight =true;
+
+    //aim function
+    public GameObject mainCam_Object;
+    //public Camera mainCam;
+    private UnityEngine.Vector3 mousePos;
+    private GameObject rotatePoint;
+    //
+
     void Update(){
         //enter the game.
         if(currentSaving.evaluable ==1){
@@ -40,11 +50,14 @@ public class GameManager : MonoBehaviour
             //RigidBody needs to wait until Player be found, otherwise it will give an error
             //(it seems it can find the Rigidbody finally, but to avoid error shows, this if sentence is still essential)
             if(Player !=null){
-                //finds the CharacterController in each scene.
                 if(PlayerRB ==null){
+                    //finds all other needed component in here.
                     PlayerRB =Player.GetComponent<Rigidbody2D>();
                     groundCheck =GameObject.Find("GroundCheck").transform;
+                    mainCam_Object =GameObject.Find("Main Camera");
+                    rotatePoint =GameObject.Find("RotatePoint");
                 }else{
+                    //This part is now implement all inputs.
                     horizontal =Input.GetAxisRaw("Horizontal");
 
                     if(Input.GetKey("space") && IsGrounded()){
@@ -55,6 +68,7 @@ public class GameManager : MonoBehaviour
                         PlayerRB.velocity =new UnityEngine.Vector2(PlayerRB.velocity.x,PlayerRB.velocity.y*0.5f);
                     }
                     Flip();
+                    Aim();
                 }
             
             }
@@ -78,5 +92,23 @@ public class GameManager : MonoBehaviour
             localScale.x *= -1f;
             Player.transform.localScale =localScale;
         }
+    }
+    //Make camera follow player
+    public UnityEngine.Vector3 Cameraoffset;
+    public float CameraSpeed;
+
+    private void Aim(){
+        //Make camera follow player
+        UnityEngine.Vector3 correctPos =Player.transform.position +Cameraoffset;
+        mainCam_Object.transform.position =UnityEngine.Vector3.Lerp(mainCam_Object.transform.position, correctPos, CameraSpeed*Time.deltaTime);
+        //
+
+        //RotatePoint will rotate since Player object cannot rotate due to the freeze of Z-axis.
+        //hence the actual projectile will shot from CrossHair object.
+        mousePos =mainCam_Object.GetComponent<Camera>().ScreenToWorldPoint(Input.mousePosition);
+        UnityEngine.Vector3 rotation =mousePos -rotatePoint.transform.position;
+        float rotZ =Mathf.Atan2(rotation.y,rotation.x)*Mathf.Rad2Deg;
+        rotatePoint.transform.rotation =UnityEngine.Quaternion.Euler(0,0,rotZ);
+        //
     }
 }

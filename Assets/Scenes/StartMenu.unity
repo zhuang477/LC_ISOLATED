@@ -3993,6 +3993,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  mainCam_Object: {fileID: 0}
+  Cameraoffset: {x: 0, y: 0, z: -5}
+  CameraSpeed: 5
 --- !u!4 &2113554644
 Transform:
   m_ObjectHideFlags: 0
