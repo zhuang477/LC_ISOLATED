@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
     private float horizontal;
     private float speed =8f;
     private float jumpingPower =16f;
-    private bool isFacingRight =true;
+    //private bool isFacingRight =true;
 
     //aim function
     public GameObject mainCam_Object;
@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
                     if(Input.GetKeyUp("space") && PlayerRB.velocity.y >0f){
                         PlayerRB.velocity =new UnityEngine.Vector2(PlayerRB.velocity.x,PlayerRB.velocity.y*0.5f);
                     }
-                    Flip();
+                    //Flip();
                     Aim();
                 }
             
@@ -86,6 +86,9 @@ public class GameManager : MonoBehaviour
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 
+    //the facing direction will based on the mouse position, hence 
+    //this function is disabled.
+    /**
     private void Flip(){
         if(isFacingRight && horizontal <0f || !isFacingRight && horizontal >0f){
             isFacingRight =!isFacingRight;
@@ -93,7 +96,8 @@ public class GameManager : MonoBehaviour
             localScale.x *= -1f;
             Player.transform.localScale =localScale;
         }
-    }
+    }**/
+
     //Make camera follow player
     public UnityEngine.Vector3 Cameraoffset;
     public float CameraSpeed;
@@ -111,5 +115,15 @@ public class GameManager : MonoBehaviour
         float rotZ =Mathf.Atan2(rotation.y,rotation.x)*Mathf.Rad2Deg;
         rotatePoint.transform.rotation =UnityEngine.Quaternion.Euler(0,0,rotZ);
         //
+
+        //rotate by mouse position.
+        //face the right
+        if((rotZ <90.00 && rotZ >0)|| (rotZ <0 && rotZ >-90.00) || rotZ ==0){
+            Player.GetComponent<SpriteRenderer>().flipX =false;
+        }
+        //face the left
+        if((rotZ >90.00 && rotZ <180.00) ||(rotZ <-90.00 && rotZ >-180.00) || rotZ ==-180){
+            Player.GetComponent<SpriteRenderer>().flipX =true;
+        }
     }
 }

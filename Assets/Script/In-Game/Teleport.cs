@@ -28,7 +28,7 @@ public class Teleport : MonoBehaviour
     }
 
     void OnTriggerStay2D(Collider2D other){
-        if(Input.GetKey(KeyCode.E)){
+        if(Input.GetKeyDown(KeyCode.E)){
             if(SceneSwitch ==false){
                 Transform teleportDestination =GameObject.Find(NextLevel.ToString()).transform;
                 Player.transform.position =teleportDestination.position;
