@@ -19,9 +19,10 @@ public class GameManager : MonoBehaviour
     //It is a transport only.
     public UserData currentSaving;
 
+    public List<int> TempBackpack;
+
     //Player Control
     public GameObject Player =null;
-    //each scene, the player will always have character controller component.
     public Rigidbody2D PlayerRB =null;
 
     //check whether the player reaches the ground.
