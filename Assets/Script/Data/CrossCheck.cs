@@ -20,11 +20,11 @@ public class CrossCheck : MonoBehaviour
         //it means player now enter the game.
         if(save.evaluable ==1){
             Item Weapon =itemDatabase.getItem(save.weapon_id);
-            player_inventory.transform.Find("Weapon_UI").GetComponent<SpriteRenderer>().sprite =Weapon.itemIcon;
-            player_inventory.transform.Find("Weapon_PaperDoll").GetComponent<SpriteRenderer>().sprite =Weapon.itemPaperDoll;
+            //player_inventory.transform.Find("Weapon_UI").GetComponent<SpriteRenderer>().sprite =Weapon.itemIcon;
+            //layer_inventory.transform.Find("Weapon_PaperDoll").GetComponent<SpriteRenderer>().sprite =Weapon.itemPaperDoll;
             Item Armor =itemDatabase.getItem(save.armor_id);
-            player_inventory.transform.Find("Armor_UI").GetComponent<SpriteRenderer>().sprite =Armor.itemIcon;
-            player_inventory.transform.Find("Armor_PaperDoll").GetComponent<SpriteRenderer>().sprite =Armor.itemPaperDoll;
+            //player_inventory.transform.Find("Armor_UI").GetComponent<SpriteRenderer>().sprite =Armor.itemIcon;
+            //player_inventory.transform.Find("Armor_PaperDoll").GetComponent<SpriteRenderer>().sprite =Armor.itemPaperDoll;
 
             //it may minus the debuff in the future.
             save.weapon_against_flesh =Weapon.stats_stringTodouble["Attack_Raw_Damage"] * Weapon.stats_stringTodouble["Attack_Against_Flesh"];

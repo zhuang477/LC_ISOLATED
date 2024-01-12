@@ -52,7 +52,6 @@ public class UserData
 
     //perk that user unlocked
     public List<int> perks_unlocked; //when a perk is unlocked, add the index of the perk into list.
-
     //whats inside backpack
     public List<int> backpack; //store the item id.
 

@@ -216,7 +216,8 @@ MonoBehaviour:
   Player: {fileID: 1428963640}
   CurrentLevel: 2
   NextLevel: 1
-  isTheNextLevelInAnotherScene: 0
+  SceneSwitch: 0
+  IsItBanner: 1
   SceneName: 
 --- !u!1 &459715704
 GameObject:
@@ -842,7 +843,8 @@ MonoBehaviour:
   Player: {fileID: 1428963640}
   CurrentLevel: 1
   NextLevel: 2
-  isTheNextLevelInAnotherScene: 0
+  SceneSwitch: 0
+  IsItBanner: 1
   SceneName: 
 --- !u!1 &1955689961
 GameObject:
@@ -964,7 +966,6 @@ MonoBehaviour:
     level: 
     location: {x: 0, y: 0, z: 0}
     currentLevel: 0
-    nextLevel: 0
     player_Avatar: {fileID: 0}
     XP: 0
     hitpoint: 0

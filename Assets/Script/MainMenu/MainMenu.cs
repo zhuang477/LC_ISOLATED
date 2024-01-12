@@ -8,6 +8,7 @@ using System.IO;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEditor;
+using System.Linq;
 
 public class MainMenu : MonoBehaviour
 {
@@ -79,7 +80,7 @@ public class MainMenu : MonoBehaviour
                     armor_id = 2,
 
                     perks_unlocked = new List<int>(),
-                    backpack = new List<int>(10),
+                    backpack = Enumerable.Repeat(0, 40).ToList(),
                     debuff =new List<int>()
                 };
                 //2. convert the UserData file into JSON.

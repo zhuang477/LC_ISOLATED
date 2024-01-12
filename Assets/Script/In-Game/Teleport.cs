@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,8 +9,15 @@ public class Teleport : MonoBehaviour
     public int CurrentLevel;
     public int NextLevel;
     public bool SceneSwitch;
+
+    //if it is banner, then send the notification to save the game.
+    public bool IsItBanner;
     public string SceneName;
     UserData save =null;
+
+    //save notify.
+    public static event Action saveGame;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +36,15 @@ public class Teleport : MonoBehaviour
     }
 
     void OnTriggerStay2D(Collider2D other){
-        if(Input.GetKeyDown(KeyCode.E)){
+        if(Input.GetKeyUp(KeyCode.E)){
+            //save the game.
+            if(IsItBanner){
+                if(saveGame !=null){
+                    saveGame();
+                }
+            }
+
+            //switch the scene.
             if(SceneSwitch ==false){
                 Transform teleportDestination =GameObject.Find(NextLevel.ToString()).transform;
                 Player.transform.position =teleportDestination.position;
@@ -37,12 +53,6 @@ public class Teleport : MonoBehaviour
                     save.currentLevel =NextLevel;
                     save.level.Add(CurrentLevel);
                     save.level.Add(NextLevel);
-                    //save the game, means that tempsave's item will save into actual backapack now.
-                    foreach(int item in GameManager.Instance.TempBackpack){
-                        save.backpack.Add(item);
-                    }
-                    //clean the temp backpack.
-                    GameManager.Instance.TempBackpack.Clear();
                 }
             }else{
 

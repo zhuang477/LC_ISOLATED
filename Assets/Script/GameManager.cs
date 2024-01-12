@@ -19,8 +19,6 @@ public class GameManager : MonoBehaviour
     //It is a transport only.
     public UserData currentSaving;
 
-    public List<int> TempBackpack;
-
     //Player Control
     public GameObject Player =null;
     public Rigidbody2D PlayerRB =null;
