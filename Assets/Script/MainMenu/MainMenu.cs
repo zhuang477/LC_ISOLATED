@@ -18,7 +18,6 @@ public class MainMenu : MonoBehaviour
 
     public List<GameObject> buttons;
     public SceneLoader sceneLoader;
-    public GameObject itemDatabase;
 
     //For Load interface.
     public GameObject SaveView;
@@ -93,7 +92,6 @@ public class MainMenu : MonoBehaviour
                     
                 //persist the data, keep itemdatabase running, enter the game(change scene)
                 GameManager.Instance.currentSaving =newSave;
-                DontDestroyOnLoad(itemDatabase);
                 sceneLoader.LoadTargetScene();
         }
     }

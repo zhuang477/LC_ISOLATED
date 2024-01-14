@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
     //It is a transport only.
     public UserData currentSaving;
 
+    //database
+    public ItemDatabase itemDatabase;
+
     //Player Control
     public GameObject Player =null;
     public Rigidbody2D PlayerRB =null;
