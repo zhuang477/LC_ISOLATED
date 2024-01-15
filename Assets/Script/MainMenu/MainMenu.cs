@@ -69,6 +69,7 @@ public class MainMenu : MonoBehaviour
                     evaluable =1,
                     saveName = inputField.text,
                     level = new List<int>(),
+                    moveSpeed =6,
                     //current level and nextlevel should be assign by individual scene script.
                     player_Avatar =AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Asset/Player/Avatar/Player.png"),
                     XP = 0,
@@ -79,9 +80,14 @@ public class MainMenu : MonoBehaviour
                     armor_id = 2,
 
                     perks_unlocked = new List<int>(),
-                    backpack = Enumerable.Repeat(0, 40).ToList(),
                     debuff =new List<int>()
                 };
+
+                    //backapck
+                    newSave.backpack = Enumerable.Repeat(0, 10).ToList();
+                    newSave.backpack[0] =newSave.weapon_id;
+                    newSave.backpack[1] =newSave.armor_id;
+                
                 //2. convert the UserData file into JSON.
                 string JSONfile =JsonUtility.ToJson(newSave);
                 string gameSavingsFolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "My Games", saveFolderName);

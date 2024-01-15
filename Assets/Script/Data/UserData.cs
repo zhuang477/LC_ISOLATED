@@ -24,6 +24,7 @@ public class UserData
     public int currentLevel; //where the player is, it is spawnpoint that player spawn in.
     
     //
+    public int moveSpeed;
 
     //this will become IK in the future, now is Sprite only. It shows the player in the game(character).
     public Sprite player_Avatar;
