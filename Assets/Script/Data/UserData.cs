@@ -25,9 +25,6 @@ public class UserData
     
     //
     public int moveSpeed;
-
-    //this will become IK in the future, now is Sprite only. It shows the player in the game(character).
-    public Sprite player_Avatar;
     
     //the current XP.
     public int XP;
@@ -50,6 +47,9 @@ public class UserData
         public double armor_head;
         public double armor_torso;
         public double armor_leg;
+
+        //the shield player holding.
+        public int shield_id;
 
     //perk that user unlocked
     public List<int> perks_unlocked; //when a perk is unlocked, add the index of the perk into list.

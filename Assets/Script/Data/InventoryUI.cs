@@ -9,11 +9,12 @@ public class InventoryUI : MonoBehaviour
     public GameObject UI;
     public Image Armor_UI;
     public Image Weapon_UI;
+    public Image Shield_UI;
 
     //
     public GameObject Backpack_BG;
     public GameObject BackpackGrid;
-        //fill the backpack grid only, if using for(int i), the grid will loop forever.
+    //fill the backpack grid only, if using for(int i), the grid will loop forever.
     int backpack_slot=0;
     List<GameObject> gridList =new List<GameObject>();
     //
@@ -34,6 +35,7 @@ public class InventoryUI : MonoBehaviour
             //
             Armor_UI.sprite =itemDatabase.getItem(save.weapon_id).itemPaperDoll;
             Weapon_UI.sprite =itemDatabase.getItem(save.armor_id).itemPaperDoll;
+            Shield_UI.sprite =itemDatabase.getItem(save.shield_id).itemPaperDoll;
             //
 
             //fill the background with default grid.

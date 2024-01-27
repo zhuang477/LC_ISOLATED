@@ -11,7 +11,7 @@ public class Control : MonoBehaviour
     //aim function
     public GameObject mainCam_Object;
     //public Camera mainCam;
-    private Vector2 PlayerPos;
+    public Vector2 PlayerPos;
     private UnityEngine.Vector3 mousePos;
     private GameObject rotatePoint;
     UserData save;
@@ -70,16 +70,7 @@ public class Control : MonoBehaviour
         UnityEngine.Vector3 rotation =mousePos -rotatePoint.transform.position;
         rotZ =Mathf.Atan2(rotation.y,rotation.x)*Mathf.Rad2Deg;
         rotatePoint.transform.rotation =UnityEngine.Quaternion.Euler(0,0,rotZ);
+        Debug.Log(rotZ);
         //
-
-        //rotate by mouse position.
-        //face the right
-        if((rotZ <90.00 && rotZ >0)|| (rotZ <0 && rotZ >-90.00) || rotZ ==0){
-            Player.GetComponent<SpriteRenderer>().flipX =false;
-        }
-        //face the left
-        if((rotZ >90.00 && rotZ <180.00) ||(rotZ <-90.00 && rotZ >-180.00) || rotZ ==-180){
-            Player.GetComponent<SpriteRenderer>().flipX =true;
-        }
     }
 }

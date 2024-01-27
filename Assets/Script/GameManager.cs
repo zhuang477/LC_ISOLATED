@@ -22,6 +22,10 @@ public class GameManager : MonoBehaviour
     //database
     public ItemDatabase itemDatabase;
 
+    public Control control;
+
+    public CombatSystem combatSystem;
+
     void Update(){
         //enter the game.
         if(currentSaving.evaluable ==1){

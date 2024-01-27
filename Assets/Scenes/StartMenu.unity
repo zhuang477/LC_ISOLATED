@@ -3200,7 +3200,6 @@ MonoBehaviour:
     location: {x: 0, y: 0, z: 0}
     currentLevel: 0
     moveSpeed: 0
-    player_Avatar: {fileID: 0}
     XP: 0
     hitpoint: 0
     stanima: 0
@@ -3216,6 +3215,8 @@ MonoBehaviour:
     backpack: 
     debuff: 
   itemDatabase: {fileID: 2113554645}
+  control: {fileID: 2113554646}
+  combatSystem: {fileID: 2113554647}
 --- !u!4 &2113554644
 Transform:
   m_ObjectHideFlags: 0
@@ -3258,6 +3259,7 @@ MonoBehaviour:
   Player: {fileID: 0}
   PlayerRB: {fileID: 0}
   mainCam_Object: {fileID: 0}
+  PlayerPos: {x: 0, y: 0}
   moveSpeed: 0
   Cameraoffset: {x: 0, y: 0, z: -5}
   CameraSpeed: 5

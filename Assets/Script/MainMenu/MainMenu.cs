@@ -71,13 +71,13 @@ public class MainMenu : MonoBehaviour
                     level = new List<int>(),
                     moveSpeed =6,
                     //current level and nextlevel should be assign by individual scene script.
-                    player_Avatar =AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Asset/Player/Avatar/Player.png"),
                     XP = 0,
                     hitpoint = 50,
                     stanima = 50,
 
                     weapon_id = 1,
                     armor_id = 2,
+                    shield_id =3,
 
                     perks_unlocked = new List<int>(),
                     debuff =new List<int>()
@@ -87,6 +87,7 @@ public class MainMenu : MonoBehaviour
                     newSave.backpack = Enumerable.Repeat(0, 10).ToList();
                     newSave.backpack[0] =newSave.weapon_id;
                     newSave.backpack[1] =newSave.armor_id;
+                    newSave.backpack[2] =newSave.shield_id;
                 
                 //2. convert the UserData file into JSON.
                 string JSONfile =JsonUtility.ToJson(newSave);

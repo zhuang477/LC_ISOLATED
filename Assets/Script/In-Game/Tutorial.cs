@@ -17,7 +17,6 @@ public class Tutorial : MonoBehaviour
         if(save.level.Count ==0){
             save.level.Add(1);
             save.currentLevel =1;
-            Player.GetComponent<SpriteRenderer>().sprite =save.player_Avatar;
             Player.transform.position =SpawnPoint0.position;
             save.location =Player.transform.position;
         }

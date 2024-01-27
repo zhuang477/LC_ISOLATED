@@ -24,12 +24,14 @@ public class ItemDatabase : MonoBehaviour
                 {"Attack_Stanima",10}
             },
             new Dictionary<string, string>{
-                {"Weapon Type","Sword"}
+                {"Weapon Type","Sword"},
+                {"Weapon Hold", "1H"}
             },
             new Dictionary<string,double>{
                 {"Attack_Raw_Damage",50},
                 {"Attack_Against_Flesh",1.2},
-                {"Attack_Against_Armor",0.7}
+                {"Attack_Against_Armor",0.7},
+                {"Attack_Speed",2}
             }),
             //
 
@@ -48,6 +50,19 @@ public class ItemDatabase : MonoBehaviour
                 {"Armor_Torso",10},
                 {"Armor_Leg",10}
             }),
+
+            new Item(3, "Gladiator_Shield",AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Asset/itemIcon/Gladiator_Shield_UI.png"),
+            AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Asset/Player/Inventory//PaperDoll/inv_model_3.png"),
+            "Shield","Shield used by gladiators or new soldiers' training, curved surface can easily deflect attacks",
+            new Dictionary<string, int>{
+
+            },
+            new Dictionary<string, string>{
+                {"Shield_Type","Small_Shield"}
+            },
+            new Dictionary<string, double>{
+                {"Shield_duration",5}
+            })
             //
 
             /**

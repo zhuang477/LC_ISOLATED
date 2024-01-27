@@ -1,0 +1,242 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library:
+  - m_Name: head
+    m_Hash: 670299804
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: default
+      m_Hash: 593363167
+      m_Sprite: {fileID: -2227349397777814108, guid: 6fc3fe6daeb1eb34ea0b72e2874ebcba, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -2227349397777814108, guid: 6fc3fe6daeb1eb34ea0b72e2874ebcba, type: 3}
+    - m_Name: GladFlax
+      m_Hash: 956082483
+      m_Sprite: {fileID: 4771937958227580174, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 4771937958227580174, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: lefthand
+    m_Hash: 791756292
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: default
+      m_Hash: 593363167
+      m_Sprite: {fileID: -4813342370776625890, guid: 6fc3fe6daeb1eb34ea0b72e2874ebcba, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -4813342370776625890, guid: 6fc3fe6daeb1eb34ea0b72e2874ebcba, type: 3}
+    - m_Name: GladSword
+      m_Hash: 941415071
+      m_Sprite: {fileID: -4666886713634848459, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -4666886713634848459, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: leftarmdown
+    m_Hash: 919996963
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: default
+      m_Hash: 593363167
+      m_Sprite: {fileID: -8661900681749076655, guid: 6fc3fe6daeb1eb34ea0b72e2874ebcba, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -8661900681749076655, guid: 6fc3fe6daeb1eb34ea0b72e2874ebcba, type: 3}
+    - m_Name: GladFlax
+      m_Hash: 956082483
+      m_Sprite: {fileID: -4369723187785818058, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -4369723187785818058, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: leftarmup
+    m_Hash: 463891679
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: default
+      m_Hash: 593363167
+      m_Sprite: {fileID: -3559945550564065650, guid: 6fc3fe6daeb1eb34ea0b72e2874ebcba, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3559945550564065650, guid: 6fc3fe6daeb1eb34ea0b72e2874ebcba, type: 3}
+    - m_Name: GladFlax
+      m_Hash: 956082483
+      m_Sprite: {fileID: -5418696711935318338, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -5418696711935318338, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: torso
+    m_Hash: 660585605
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: default
+      m_Hash: 593363167
+      m_Sprite: {fileID: 7914781364236906771, guid: 6fc3fe6daeb1eb34ea0b72e2874ebcba, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 7914781364236906771, guid: 6fc3fe6daeb1eb34ea0b72e2874ebcba, type: 3}
+    - m_Name: GladFlax
+      m_Hash: 956082483
+      m_Sprite: {fileID: -7675288470420869472, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -7675288470420869472, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: leftfeet
+    m_Hash: 916727876
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: default
+      m_Hash: 593363167
+      m_Sprite: {fileID: 2055405377032556785, guid: 6fc3fe6daeb1eb34ea0b72e2874ebcba, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2055405377032556785, guid: 6fc3fe6daeb1eb34ea0b72e2874ebcba, type: 3}
+    - m_Name: GladFlax
+      m_Hash: 956082483
+      m_Sprite: {fileID: 5291203560667738922, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 5291203560667738922, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: leftlegup
+    m_Hash: 594494110
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: default
+      m_Hash: 593363167
+      m_Sprite: {fileID: 1075337135334402540, guid: 6fc3fe6daeb1eb34ea0b72e2874ebcba, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1075337135334402540, guid: 6fc3fe6daeb1eb34ea0b72e2874ebcba, type: 3}
+    - m_Name: GladFlax
+      m_Hash: 956082483
+      m_Sprite: {fileID: -5382056392563367010, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -5382056392563367010, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: righthand
+    m_Hash: 389701805
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: default
+      m_Hash: 593363167
+      m_Sprite: {fileID: -7287268734107789420, guid: 6fc3fe6daeb1eb34ea0b72e2874ebcba, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -7287268734107789420, guid: 6fc3fe6daeb1eb34ea0b72e2874ebcba, type: 3}
+    - m_Name: GladShield
+      m_Hash: 788445361
+      m_Sprite: {fileID: 747007666067795017, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 747007666067795017, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: leftlegdown
+    m_Hash: 56770913
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: default
+      m_Hash: 593363167
+      m_Sprite: {fileID: -3860483501865664978, guid: 6fc3fe6daeb1eb34ea0b72e2874ebcba, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3860483501865664978, guid: 6fc3fe6daeb1eb34ea0b72e2874ebcba, type: 3}
+    - m_Name: GladFlax
+      m_Hash: 956082483
+      m_Sprite: {fileID: 1457548569204657520, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1457548569204657520, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: rightarmdown
+    m_Hash: 328582438
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: default
+      m_Hash: 593363167
+      m_Sprite: {fileID: 7488395394922464860, guid: 6fc3fe6daeb1eb34ea0b72e2874ebcba, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 7488395394922464860, guid: 6fc3fe6daeb1eb34ea0b72e2874ebcba, type: 3}
+    - m_Name: GladFlax
+      m_Hash: 956082483
+      m_Sprite: {fileID: 4532438354935270815, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 4532438354935270815, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: rightarmup
+    m_Hash: 873757901
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: default
+      m_Hash: 593363167
+      m_Sprite: {fileID: -4723324332316440647, guid: 6fc3fe6daeb1eb34ea0b72e2874ebcba, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -4723324332316440647, guid: 6fc3fe6daeb1eb34ea0b72e2874ebcba, type: 3}
+    - m_Name: GladFlax
+      m_Hash: 956082483
+      m_Sprite: {fileID: -6421651631889491265, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -6421651631889491265, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: rightfeet
+    m_Hash: 246380269
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: default
+      m_Hash: 593363167
+      m_Sprite: {fileID: -6966165678719861965, guid: 6fc3fe6daeb1eb34ea0b72e2874ebcba, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -6966165678719861965, guid: 6fc3fe6daeb1eb34ea0b72e2874ebcba, type: 3}
+    - m_Name: GladFlax
+      m_Hash: 956082483
+      m_Sprite: {fileID: -8435281916417213866, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -8435281916417213866, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: rightlegup
+    m_Hash: 215831180
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: default
+      m_Hash: 593363167
+      m_Sprite: {fileID: -4241113955521688915, guid: 6fc3fe6daeb1eb34ea0b72e2874ebcba, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -4241113955521688915, guid: 6fc3fe6daeb1eb34ea0b72e2874ebcba, type: 3}
+    - m_Name: GladFlax
+      m_Hash: 956082483
+      m_Sprite: {fileID: -1128807339257467240, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1128807339257467240, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: rightlegdown
+    m_Hash: 639733348
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: default
+      m_Hash: 593363167
+      m_Sprite: {fileID: 3642364563287714123, guid: 6fc3fe6daeb1eb34ea0b72e2874ebcba, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 3642364563287714123, guid: 6fc3fe6daeb1eb34ea0b72e2874ebcba, type: 3}
+    - m_Name: GladFlax
+      m_Hash: 956082483
+      m_Sprite: {fileID: -462017171781707558, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -462017171781707558, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  m_PrimaryLibraryGUID: 
+  m_ModificationHash: 638415961280248768
+  m_Version: 1
