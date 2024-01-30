@@ -29,6 +29,8 @@ public class Player_Animation : MonoBehaviour
     }
 
     void LeftHand(){
+        //swords and hammer can attack head and body, axe can only attack head(both 1H and 2H).
+        //spears(both 1H and 2H) and polearms can attack all parts.
         if(save !=null && itemDatabase !=null){
             if(itemDatabase.getItem(save.weapon_id).stats_stringTostring["Weapon Hold"].Equals("1H")){
                 animator.SetBool("1H",true);
@@ -45,16 +47,13 @@ public class Player_Animation : MonoBehaviour
                 animator.SetFloat("AttackSpeed",attackspeed);
                 //head
                 if((int)GameManager.Instance.combatSystem.attackPos ==0){
-                    animator.SetTrigger("Sword_UpAttack");
+                    animator.SetTrigger("Sword_Up");
                 }
                 //torso
                 if((int)GameManager.Instance.combatSystem.attackPos ==1){
-                    animator.SetTrigger("Sword_MidAttack");
+                    animator.SetTrigger("Sword_Mid");
                 }
-                //leg
-                if((int)GameManager.Instance.combatSystem.attackPos ==2){
-                    animator.SetTrigger("Sword_DownAttack");
-                }
+
             }
         }
     }
@@ -97,6 +96,14 @@ public class Player_Animation : MonoBehaviour
             //standing.
             if(control.PlayerPos.x ==0){
                 animator.SetBool("IsWalking",false);
+            }
+
+            //Squat
+            if(Input.GetKey(KeyCode.S)){
+                animator.SetBool("IsSquatting",true);
+            }
+            if(Input.GetKeyUp(KeyCode.S)){
+                animator.SetBool("IsSquatting",false);
             }
         }
     }
