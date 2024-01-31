@@ -16,7 +16,8 @@ public class Teleport : MonoBehaviour
     UserData save =null;
 
     //save notify.
-    public static event Action saveGame;
+    public delegate void SaveAction();
+    public static event SaveAction saveGame;
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +37,7 @@ public class Teleport : MonoBehaviour
     }
 
     void OnTriggerStay2D(Collider2D other){
-        if(Input.GetKeyUp(KeyCode.E)){
+        if(Input.GetKeyDown(KeyCode.E)){
             //save the game.
             if(IsItBanner){
                 if(saveGame !=null){

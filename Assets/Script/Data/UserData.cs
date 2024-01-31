@@ -55,6 +55,7 @@ public class UserData
     public List<int> perks_unlocked; //when a perk is unlocked, add the index of the perk into list.
     //whats inside backpack
     public List<int> backpack; //store the item id.
+    public int itemInBackpack; //directly find how many items in backpack, mainly for TempSave.
 
     public List<int> debuff; //debuff can not only one.
 

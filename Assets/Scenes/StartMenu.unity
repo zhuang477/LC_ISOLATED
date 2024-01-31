@@ -3174,6 +3174,7 @@ GameObject:
   - component: {fileID: 2113554645}
   - component: {fileID: 2113554646}
   - component: {fileID: 2113554647}
+  - component: {fileID: 2113554648}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3211,6 +3212,7 @@ MonoBehaviour:
     armor_head: 0
     armor_torso: 0
     armor_leg: 0
+    shield_id: 0
     perks_unlocked: 
     backpack: 
     debuff: 
@@ -3280,6 +3282,18 @@ MonoBehaviour:
   Player: {fileID: 0}
   control: {fileID: 2113554646}
   rotZ: 0
+--- !u!114 &2113554648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113554642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7d490aba36de834392433da632ac871, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2123790988
 GameObject:
   m_ObjectHideFlags: 0

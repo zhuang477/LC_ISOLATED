@@ -17,6 +17,12 @@ public class Control : MonoBehaviour
     UserData save;
     //
 
+    //Key management.
+        //Attack.
+        public delegate void AttackAction();
+        public static event AttackAction Attack;
+
+
     // Update is called once per frame
     void Update()
     {
@@ -70,7 +76,6 @@ public class Control : MonoBehaviour
         UnityEngine.Vector3 rotation =mousePos -rotatePoint.transform.position;
         rotZ =Mathf.Atan2(rotation.y,rotation.x)*Mathf.Rad2Deg;
         rotatePoint.transform.rotation =UnityEngine.Quaternion.Euler(0,0,rotZ);
-        Debug.Log(rotZ);
         //
     }
 }

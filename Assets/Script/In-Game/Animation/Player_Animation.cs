@@ -108,16 +108,3 @@ public class Player_Animation : MonoBehaviour
         }
     }
 }
-
-/**
-
-//rotate by mouse position.
-        //face the right
-        if((rotZ <90.00 && rotZ >0)|| (rotZ <0 && rotZ >-90.00) || rotZ ==0){
-            Player.GetComponent<SpriteRenderer>().flipX =false;
-        }
-        //face the left
-        if((rotZ >90.00 && rotZ <180.00) ||(rotZ <-90.00 && rotZ >-180.00) || rotZ ==-180){
-            Player.GetComponent<SpriteRenderer>().flipX =true;
-        }
-*/

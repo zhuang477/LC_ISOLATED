@@ -88,6 +88,7 @@ public class MainMenu : MonoBehaviour
                     newSave.backpack[0] =newSave.weapon_id;
                     newSave.backpack[1] =newSave.armor_id;
                     newSave.backpack[2] =newSave.shield_id;
+                    newSave.itemInBackpack =3;
                 
                 //2. convert the UserData file into JSON.
                 string JSONfile =JsonUtility.ToJson(newSave);
