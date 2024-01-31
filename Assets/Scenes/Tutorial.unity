@@ -250,7 +250,7 @@ GameObject:
   - component: {fileID: 396871314}
   m_Layer: 0
   m_Name: 2
-  m_TagString: Untagged
+  m_TagString: Teleport
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1453,6 +1453,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8653719598885068355, guid: 6fc3fe6daeb1eb34ea0b72e2874ebcba, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: -8653719598885068355, guid: 6fc3fe6daeb1eb34ea0b72e2874ebcba, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: -7561113526181806574, guid: 6fc3fe6daeb1eb34ea0b72e2874ebcba, type: 3}
@@ -2818,7 +2822,7 @@ GameObject:
   - component: {fileID: 1662509405}
   m_Layer: 0
   m_Name: 1
-  m_TagString: Untagged
+  m_TagString: Teleport
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

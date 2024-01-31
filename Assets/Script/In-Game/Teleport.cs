@@ -22,19 +22,17 @@ public class Teleport : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(save ==null){
-            save =GameManager.Instance.currentSaving;
-
-        }else{
-
-        }
+        save =GameManager.Instance.currentSaving;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    /**
+    void OnEnable(){
+        //Control.Tele +=Save;
     }
+
+    void OnDisable(){
+        //Control.Tele -=Save;
+    }**/
 
     void OnTriggerStay2D(Collider2D other){
         if(Input.GetKeyDown(KeyCode.E)){

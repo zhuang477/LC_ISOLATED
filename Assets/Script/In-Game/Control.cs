@@ -18,9 +18,21 @@ public class Control : MonoBehaviour
     //
 
     //Key management.
+        public delegate void Action();
+
         //Attack.
-        public delegate void AttackAction();
-        public static event AttackAction Attack;
+        public static event Action Attack;
+
+        //Spine Rotate
+        public static event Action SpineRotating;
+        public static event Action StopSpineRotating;
+
+        //Squat
+        public static event Action Squatting;
+        public static event Action StopSquatting;
+
+        //Teleport(not in animation, is in teleport)
+        //public static event Action Tele;
 
 
     // Update is called once per frame
@@ -36,16 +48,67 @@ public class Control : MonoBehaviour
                     mainCam_Object =GameObject.Find("Main Camera");
                     rotatePoint =GameObject.Find("RotatePoint");
 
+                //when rigidbody is assigned.
                 }else{
                     Aim();
+                    AttackOnClicked();
+                    SpineRotate();
+                    Squat();
+                    //Teleport();
                 }
             
             }
     }
 
+    //Attack
+    public void AttackOnClicked(){
+        if(Input.GetKeyDown(KeyCode.Mouse0)){
+            if(Attack !=null){
+                Attack();
+            }
+        }
+    }
+
+    //Spine Rotate
+    public void SpineRotate(){
+        if(Input.GetKey(KeyCode.Mouse1)){
+            if(SpineRotating !=null){
+                SpineRotating();
+            }
+        }
+        if(Input.GetKeyUp(KeyCode.Mouse1)){
+            if(StopSpineRotating !=null){
+                StopSpineRotating();
+            }
+        }
+    }
+
+    //Squat
+    public void Squat(){
+        if(Input.GetKey(KeyCode.S)){
+            if(Squatting !=null){
+                Squatting();
+            }
+        }
+        if(Input.GetKeyUp(KeyCode.S)){
+            if(StopSquatting !=null){
+                StopSquatting();
+            }
+        }
+    }
+
+    //Teleport
+    /**
+    public void Teleport(){
+        if(Input.GetKeyDown(KeyCode.E)){
+            if(Tele !=null){
+                Tele();
+            }
+        }
+    }**/
+
     void FixedUpdate(){
         PlayerPos.x =Input.GetAxisRaw("Horizontal");
-        //PlayerPos.y = Input.GetAxisRaw("Vertical");
         Move();
     }
 
