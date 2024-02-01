@@ -62,7 +62,40 @@ public class ItemDatabase : MonoBehaviour
             },
             new Dictionary<string, double>{
                 {"Shield_duration",5}
-            })
+            }),
+
+            new Item(4, "Pylongs_Pike",AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Asset/itemIcon/Py_Pike_UI.png"),
+            AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Asset/Player/Inventory//PaperDoll/inv_model_4.png"),
+            "Weapon","A quite long pike that use in Phalanx, firstly use by Companion Relos' troops",
+            new Dictionary<string, int>{
+                {"Attack_Stanima",20}
+            },
+            new Dictionary<string, string>{
+                {"Weapon Type","Polearm"},
+                {"Weapon Hold", "2H"},
+                {"Polearm Type","Pike"}
+            },
+            new Dictionary<string,double>{
+                {"Attack_Raw_Damage",100},
+                {"Attack_Against_Flesh",1},
+                {"Attack_Against_Armor",1},
+                {"Attack_Speed",0.8}
+            }),
+
+            new Item(5, "Relos_Hoplite_Armor",AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Asset/itemIcon/Relos_Hoplite_UI.png"),
+            AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Asset/Player/Inventory//PaperDoll/inv_model_5.png"),
+            "Armor","Hoplite armors equip br Relo's troops",
+            new Dictionary<string, int>{
+                {"Armor_Stanima_Cost",10},
+            },
+            new Dictionary<string, string>{
+                
+            },
+            new Dictionary<string,double>{
+                {"Armor_Head",50},
+                {"Armor_Torso",20},
+                {"Armor_Leg",20}
+            }),
             //
 
             /**

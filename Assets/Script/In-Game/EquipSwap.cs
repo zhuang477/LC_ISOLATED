@@ -37,6 +37,12 @@ public class EquipSwap : MonoBehaviour
                     child.GetComponent<SpriteResolver>().SetCategoryAndLabel(partName,"GladFlax");
                 }
             }
+            if(Armor_id ==5){
+                foreach (GameObject child in Armor_Sprite){
+                    string partName =child.name;
+                    child.GetComponent<SpriteResolver>().SetCategoryAndLabel(partName,"Relos_Hoplite");
+                }
+            }
         }
     }
 

@@ -27,8 +27,13 @@ MonoBehaviour:
       m_Sprite: {fileID: 4771937958227580174, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: 4771937958227580174, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+    - m_Name: Relos_Hoplite
+      m_Hash: 514878903
+      m_Sprite: {fileID: -6323044129194891461, guid: ef306fa172b27954d838fbb5cacfe287, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -6323044129194891461, guid: ef306fa172b27954d838fbb5cacfe287, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 2
+    m_EntryOverrideCount: 3
   - m_Name: lefthand
     m_Hash: 791756292
     m_CategoryList: []
@@ -43,8 +48,13 @@ MonoBehaviour:
       m_Sprite: {fileID: -4666886713634848459, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: -4666886713634848459, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+    - m_Name: Pylongs_Pike
+      m_Hash: 27223487
+      m_Sprite: {fileID: -5423888906564967484, guid: ef306fa172b27954d838fbb5cacfe287, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -5423888906564967484, guid: ef306fa172b27954d838fbb5cacfe287, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 2
+    m_EntryOverrideCount: 3
   - m_Name: leftarmdown
     m_Hash: 919996963
     m_CategoryList: []
@@ -59,8 +69,13 @@ MonoBehaviour:
       m_Sprite: {fileID: -4369723187785818058, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: -4369723187785818058, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+    - m_Name: Relos_Hoplite
+      m_Hash: 514878903
+      m_Sprite: {fileID: -7197518355268546866, guid: ef306fa172b27954d838fbb5cacfe287, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -7197518355268546866, guid: ef306fa172b27954d838fbb5cacfe287, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 2
+    m_EntryOverrideCount: 3
   - m_Name: leftarmup
     m_Hash: 463891679
     m_CategoryList: []
@@ -75,8 +90,13 @@ MonoBehaviour:
       m_Sprite: {fileID: -5418696711935318338, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: -5418696711935318338, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+    - m_Name: Relos_Hoplite
+      m_Hash: 514878903
+      m_Sprite: {fileID: -965269730286856482, guid: ef306fa172b27954d838fbb5cacfe287, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -965269730286856482, guid: ef306fa172b27954d838fbb5cacfe287, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 2
+    m_EntryOverrideCount: 3
   - m_Name: torso
     m_Hash: 660585605
     m_CategoryList: []
@@ -91,8 +111,13 @@ MonoBehaviour:
       m_Sprite: {fileID: -7675288470420869472, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: -7675288470420869472, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+    - m_Name: Relos_Hoplite
+      m_Hash: 514878903
+      m_Sprite: {fileID: 3294879530948662036, guid: ef306fa172b27954d838fbb5cacfe287, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 3294879530948662036, guid: ef306fa172b27954d838fbb5cacfe287, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 2
+    m_EntryOverrideCount: 3
   - m_Name: leftfeet
     m_Hash: 916727876
     m_CategoryList: []
@@ -107,8 +132,13 @@ MonoBehaviour:
       m_Sprite: {fileID: 5291203560667738922, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: 5291203560667738922, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+    - m_Name: Relos_Hoplite
+      m_Hash: 514878903
+      m_Sprite: {fileID: -1825644080372327927, guid: ef306fa172b27954d838fbb5cacfe287, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1825644080372327927, guid: ef306fa172b27954d838fbb5cacfe287, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 2
+    m_EntryOverrideCount: 3
   - m_Name: leftlegup
     m_Hash: 594494110
     m_CategoryList: []
@@ -123,8 +153,13 @@ MonoBehaviour:
       m_Sprite: {fileID: -5382056392563367010, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: -5382056392563367010, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+    - m_Name: Relos_Hoplite
+      m_Hash: 514878903
+      m_Sprite: {fileID: 7288051544181213918, guid: ef306fa172b27954d838fbb5cacfe287, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 7288051544181213918, guid: ef306fa172b27954d838fbb5cacfe287, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 2
+    m_EntryOverrideCount: 3
   - m_Name: righthand
     m_Hash: 389701805
     m_CategoryList: []
@@ -155,8 +190,13 @@ MonoBehaviour:
       m_Sprite: {fileID: 1457548569204657520, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: 1457548569204657520, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+    - m_Name: Relos_Hoplite
+      m_Hash: 514878903
+      m_Sprite: {fileID: -8787227981776288330, guid: ef306fa172b27954d838fbb5cacfe287, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -8787227981776288330, guid: ef306fa172b27954d838fbb5cacfe287, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 2
+    m_EntryOverrideCount: 3
   - m_Name: rightarmdown
     m_Hash: 328582438
     m_CategoryList: []
@@ -171,8 +211,13 @@ MonoBehaviour:
       m_Sprite: {fileID: 4532438354935270815, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: 4532438354935270815, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+    - m_Name: Relos_Hoplite
+      m_Hash: 514878903
+      m_Sprite: {fileID: -7708371892867445721, guid: ef306fa172b27954d838fbb5cacfe287, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -7708371892867445721, guid: ef306fa172b27954d838fbb5cacfe287, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 2
+    m_EntryOverrideCount: 3
   - m_Name: rightarmup
     m_Hash: 873757901
     m_CategoryList: []
@@ -187,8 +232,13 @@ MonoBehaviour:
       m_Sprite: {fileID: -6421651631889491265, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: -6421651631889491265, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+    - m_Name: Relos_Hoplite
+      m_Hash: 514878903
+      m_Sprite: {fileID: 2899998511323013593, guid: ef306fa172b27954d838fbb5cacfe287, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2899998511323013593, guid: ef306fa172b27954d838fbb5cacfe287, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 2
+    m_EntryOverrideCount: 3
   - m_Name: rightfeet
     m_Hash: 246380269
     m_CategoryList: []
@@ -203,8 +253,13 @@ MonoBehaviour:
       m_Sprite: {fileID: -8435281916417213866, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: -8435281916417213866, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+    - m_Name: Relos_Hoplite
+      m_Hash: 514878903
+      m_Sprite: {fileID: 1117704985080702008, guid: ef306fa172b27954d838fbb5cacfe287, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1117704985080702008, guid: ef306fa172b27954d838fbb5cacfe287, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 2
+    m_EntryOverrideCount: 3
   - m_Name: rightlegup
     m_Hash: 215831180
     m_CategoryList: []
@@ -219,8 +274,13 @@ MonoBehaviour:
       m_Sprite: {fileID: -1128807339257467240, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: -1128807339257467240, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+    - m_Name: Relos_Hoplite
+      m_Hash: 514878903
+      m_Sprite: {fileID: -5722523680940537240, guid: ef306fa172b27954d838fbb5cacfe287, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -5722523680940537240, guid: ef306fa172b27954d838fbb5cacfe287, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 2
+    m_EntryOverrideCount: 3
   - m_Name: rightlegdown
     m_Hash: 639733348
     m_CategoryList: []
@@ -235,8 +295,13 @@ MonoBehaviour:
       m_Sprite: {fileID: -462017171781707558, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: -462017171781707558, guid: bf729c40b32fffe4b847f5b8381a2e98, type: 3}
+    - m_Name: Relos_Hoplite
+      m_Hash: 514878903
+      m_Sprite: {fileID: 8264908307434159320, guid: ef306fa172b27954d838fbb5cacfe287, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 8264908307434159320, guid: ef306fa172b27954d838fbb5cacfe287, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 2
+    m_EntryOverrideCount: 3
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 638415961280248768
+  m_ModificationHash: 638423976828578102
   m_Version: 1

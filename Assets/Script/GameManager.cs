@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     public Control control;
 
     public CombatSystem combatSystem;
+    public TempSave tempSave;
 
     void Update(){
         //enter the game.

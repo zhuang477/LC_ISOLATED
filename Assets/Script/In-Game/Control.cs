@@ -31,8 +31,9 @@ public class Control : MonoBehaviour
         public static event Action Squatting;
         public static event Action StopSquatting;
 
-        //Teleport(not in animation, is in teleport)
+        //Teleport(not in animation, is in teleport) <- not implement yet.
         //public static event Action Tele;
+        public static event Action IsPicked;
 
 
     // Update is called once per frame
@@ -55,9 +56,21 @@ public class Control : MonoBehaviour
                     SpineRotate();
                     Squat();
                     //Teleport();
+                    PickUpItem();
                 }
             
             }
+    }
+
+
+    void OnEnable(){
+        //see Pickable.cs, it identifies items that can be picked.
+        Pickable.IsPickable +=PickUpItem;
+    }
+
+    void OnDisable(){
+        //see Pickable.cs, it identifies items that can be picked.
+        Pickable.IsPickable -=PickUpItem;
     }
 
     //Attack
@@ -106,6 +119,14 @@ public class Control : MonoBehaviour
             }
         }
     }**/
+
+    //this is a DOUBLE-EVENT! When an item is pickable, Pickable.cs will send event to Control.cs
+    //And when Control.cs press E, Pickable.cs will receive the input.
+    public void PickUpItem(){
+        if(Input.GetKeyDown(KeyCode.E)){
+            IsPicked();
+        }
+    }
 
     void FixedUpdate(){
         PlayerPos.x =Input.GetAxisRaw("Horizontal");

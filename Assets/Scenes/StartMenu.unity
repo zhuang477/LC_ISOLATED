@@ -3215,10 +3215,12 @@ MonoBehaviour:
     shield_id: 0
     perks_unlocked: 
     backpack: 
+    itemInBackpack: 0
     debuff: 
   itemDatabase: {fileID: 2113554645}
   control: {fileID: 2113554646}
   combatSystem: {fileID: 2113554647}
+  tempSave: {fileID: 2113554648}
 --- !u!4 &2113554644
 Transform:
   m_ObjectHideFlags: 0
@@ -3294,6 +3296,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7d490aba36de834392433da632ac871, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TempBackpack: 
+  ItemCount: 0
 --- !u!1 &2123790988
 GameObject:
   m_ObjectHideFlags: 0
