@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class InventoryUI : MonoBehaviour
 {
+    UserData save;
     ItemDatabase itemDatabase;
     public GameObject UI;
     public Image Armor_UI;
@@ -19,11 +20,13 @@ public class InventoryUI : MonoBehaviour
     List<GameObject> gridList =new List<GameObject>();
     //
 
+    bool IsBackpackInit =false;
+
 
     // Update is called once per frame
     void Update()
     {
-        UserData save =GameManager.Instance.currentSaving;
+        save =GameManager.Instance.currentSaving;
         itemDatabase =GameManager.Instance.itemDatabase;
         if(save.evaluable ==1){
             if(Input.GetKey(KeyCode.Tab)){
@@ -54,20 +57,44 @@ public class InventoryUI : MonoBehaviour
             }
             //
 
-            //update the backpack icon.
+            
             int gridNumber =0;
-            foreach(GameObject iconGO in gridList){
-                Image imageComponent =iconGO.GetComponent<Image>();
-                if(itemDatabase.getItem(save.backpack[gridNumber]) ==null){
+            //init the backpack icon.
+            if(IsBackpackInit ==false){
+                foreach(GameObject iconGO in gridList){
+                    Image imageComponent =iconGO.GetComponent<Image>();
+                    if(itemDatabase.getItem(save.backpack[gridNumber]) ==null){
 
-                }else{
-                    imageComponent.sprite =itemDatabase.getItem(save.backpack[gridNumber]).itemIcon;
+                    }else{
+                        imageComponent.sprite =itemDatabase.getItem(save.backpack[gridNumber]).itemIcon;
+                    }
+                    gridNumber++;
                 }
-                gridNumber++;
+                IsBackpackInit =true;
             }
             //
         }else{
 
+        }
+    }
+
+    void OnEnable(){
+        Backpack_Save.AddItem += AddItemToBackpack;
+    }
+
+    void OnDisable(){
+        Backpack_Save.AddItem -= AddItemToBackpack;
+    }
+
+    
+    void AddItemToBackpack(){
+        for(int i=0;i<save.backpack.Count;i++){
+            if(save.backpack[i] !=0){
+                Image IconCheck =gridList[i].GetComponent<Image>();
+                if(IconCheck.sprite ==null){
+                    IconCheck.sprite =itemDatabase.getItem(save.backpack[i]).itemIcon;
+                }
+            }
         }
     }
 }

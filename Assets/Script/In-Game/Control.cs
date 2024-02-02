@@ -124,6 +124,7 @@ public class Control : MonoBehaviour
     //And when Control.cs press E, Pickable.cs will receive the input.
     public void PickUpItem(){
         if(Input.GetKeyDown(KeyCode.E)){
+            save.itemInBackpack ++;
             IsPicked();
         }
     }

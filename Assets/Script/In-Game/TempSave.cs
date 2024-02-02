@@ -10,6 +10,7 @@ public class TempSave : MonoBehaviour
     UserData save;
     double TempHP;
     public List<int> TempBackpack;
+    public List<int> TempItemLocation;
 
     //this is for items that not being assign to the tempbackpack,
     //for example, pick up items. I should not directly add it to the TempBackpack
@@ -36,13 +37,16 @@ public class TempSave : MonoBehaviour
             if(pendingItem.Count !=0){
                 for(int i=0;i<TempBackpack.Count;i++){
                     if(TempBackpack[i]==0){
-                        //
+                        //add items in tempbackpack.
+                        TempBackpack[i] =pendingItem[0];
+                        //add item count.
+                        ItemCount++;
+                        //remove item from pendingItem.
+                        pendingItem.Remove(0);
                     }
                 }
+                //shows the item will be handled in InventoryUI.cs.
             }
-            //add items in tempbackpack.
-
-            //count how many items in tempbackpack
         }
     }
 

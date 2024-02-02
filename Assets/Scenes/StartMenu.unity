@@ -3220,7 +3220,7 @@ MonoBehaviour:
   itemDatabase: {fileID: 2113554645}
   control: {fileID: 2113554646}
   combatSystem: {fileID: 2113554647}
-  tempSave: {fileID: 2113554648}
+  backpack_Save: {fileID: 2113554648}
 --- !u!4 &2113554644
 Transform:
   m_ObjectHideFlags: 0
@@ -3293,11 +3293,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2113554642}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7d490aba36de834392433da632ac871, type: 3}
+  m_Script: {fileID: 11500000, guid: c8ad23514d0e3fc43b7c073543be4aae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TempBackpack: 
-  ItemCount: 0
+  pendingItem: 
 --- !u!1 &2123790988
 GameObject:
   m_ObjectHideFlags: 0

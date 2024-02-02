@@ -25,7 +25,9 @@ public class GameManager : MonoBehaviour
     public Control control;
 
     public CombatSystem combatSystem;
-    public TempSave tempSave;
+    
+    //manage the backpack when items in backpack have change.
+    public Backpack_Save backpack_Save;
 
     void Update(){
         //enter the game.

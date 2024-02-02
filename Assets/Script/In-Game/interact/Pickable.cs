@@ -25,7 +25,8 @@ public class Pickable : MonoBehaviour
     }
 
     void DestroyThisItem(){
-        GameManager.Instance.tempSave.pendingItem.Add(ItemID);
+        GameManager.Instance.backpack_Save.pendingItem.Add(ItemID);
+        //GameManager.Instance.tempSave.pendingItem.Add(ItemID);
         Destroy(gameObject);
     }
 }
