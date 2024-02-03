@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,14 +16,19 @@ public class InventoryUI : MonoBehaviour
     //
     public GameObject Backpack_BG;
     public GameObject BackpackGrid;
+    public GameObject BackpackIcon;
+    public Transform GridAndIconPlaced;
+    public Scrollbar backpack_scrollbar;
     //fill the backpack grid only, if using for(int i), the grid will loop forever.
     int backpack_slot=0;
-    List<GameObject> gridList =new List<GameObject>();
+
+    float posX =50f;
+    float posY =-50f;
+    List<GameObject> IconList =new List<GameObject>();
+
     //
 
     bool IsBackpackInit =false;
-
-
     // Update is called once per frame
     void Update()
     {
@@ -42,36 +48,39 @@ public class InventoryUI : MonoBehaviour
             //
 
             //fill the background with default grid.
-            float posX =-240f;
-            float posY =50f;
             for(;backpack_slot <save.backpack.Count;backpack_slot++){
                 if(backpack_slot %5==0 && backpack_slot !=0){
-                    posX =-240f;
+                    posX =50f;
                     posY -=100f;
                 }
-                GameObject grid =Instantiate(BackpackGrid,Backpack_BG.transform);
-                RectTransform rectTransform =grid.GetComponent<RectTransform>();
-                rectTransform.anchoredPosition =new Vector2(posX,posY);
+                GameObject grid =Instantiate(BackpackGrid,GridAndIconPlaced);
+                GameObject icon =Instantiate(BackpackIcon,GridAndIconPlaced);
+                RectTransform GridrectTransform =grid.GetComponent<RectTransform>();
+                RectTransform IconrectTransform =icon.GetComponent<RectTransform>();
+                GridrectTransform.anchoredPosition =new UnityEngine.Vector2(posX,posY);
+                IconrectTransform.anchoredPosition =new UnityEngine.Vector2(posX,posY);
                 posX +=100f;
-                gridList.Add(grid);
+                IconList.Add(icon);
             }
             //
 
             
-            int gridNumber =0;
+            int iconNumber =0;
             //init the backpack icon.
             if(IsBackpackInit ==false){
-                foreach(GameObject iconGO in gridList){
+                foreach(GameObject iconGO in IconList){
                     Image imageComponent =iconGO.GetComponent<Image>();
-                    if(itemDatabase.getItem(save.backpack[gridNumber]) ==null){
+                    if(itemDatabase.getItem(save.backpack[iconNumber]) ==null){
 
                     }else{
-                        imageComponent.sprite =itemDatabase.getItem(save.backpack[gridNumber]).itemIcon;
+                        imageComponent.sprite =itemDatabase.getItem(save.backpack[iconNumber]).itemIcon;
                     }
-                    gridNumber++;
+                    iconNumber++;
                 }
                 IsBackpackInit =true;
             }
+            //setting mask.
+            GridAndIconPlaced.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical,-posY+50f);
             //
         }else{
 
@@ -90,8 +99,8 @@ public class InventoryUI : MonoBehaviour
     void AddItemToBackpack(){
         for(int i=0;i<save.backpack.Count;i++){
             if(save.backpack[i] !=0){
-                Image IconCheck =gridList[i].GetComponent<Image>();
-                if(IconCheck.sprite ==null){
+                Image IconCheck =IconList[i].GetComponent<Image>();
+                if(IconCheck.sprite.name =="Blank"){
                     IconCheck.sprite =itemDatabase.getItem(save.backpack[i]).itemIcon;
                 }
             }

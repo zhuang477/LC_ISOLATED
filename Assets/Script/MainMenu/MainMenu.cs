@@ -84,7 +84,7 @@ public class MainMenu : MonoBehaviour
                 };
 
                     //backapck
-                    newSave.backpack = Enumerable.Repeat(0, 10).ToList();
+                    newSave.backpack = Enumerable.Repeat(0, 20).ToList();
                     newSave.backpack[0] =newSave.weapon_id;
                     newSave.backpack[1] =newSave.armor_id;
                     newSave.backpack[2] =newSave.shield_id;
