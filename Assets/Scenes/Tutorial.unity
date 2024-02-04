@@ -159,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 252.53043, y: 0.5}
+  m_AnchoredPosition: {x: 281.47, y: 0.5}
   m_SizeDelta: {x: -506.0533, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &22904123
@@ -2539,11 +2539,8 @@ MonoBehaviour:
   Armor_UI: {fileID: 1641300620}
   Weapon_UI: {fileID: 1137779900}
   Shield_UI: {fileID: 906484763}
-  Backpack_BG: {fileID: 1815948812}
   BackpackGrid: {fileID: 9021362871281467460, guid: 8db9fba8488982049b79a57eba7b2117, type: 3}
-  BackpackIcon: {fileID: 9021362871281467460, guid: b5def0d920e7eb74ca5ddef1c8a427da, type: 3}
   GridAndIconPlaced: {fileID: 1067223257}
-  backpack_scrollbar: {fileID: 22904123}
 --- !u!1 &1476018750
 GameObject:
   m_ObjectHideFlags: 0
