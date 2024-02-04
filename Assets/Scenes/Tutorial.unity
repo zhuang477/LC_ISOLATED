@@ -2539,8 +2539,9 @@ MonoBehaviour:
   Armor_UI: {fileID: 1641300620}
   Weapon_UI: {fileID: 1137779900}
   Shield_UI: {fileID: 906484763}
-  BackpackGrid: {fileID: 9021362871281467460, guid: 8db9fba8488982049b79a57eba7b2117, type: 3}
+  BackpackGrid: {fileID: 2593781561922748787, guid: 8db9fba8488982049b79a57eba7b2117, type: 3}
   GridAndIconPlaced: {fileID: 1067223257}
+  Icon: {fileID: 8755122196767027641, guid: fc5839b08523b3844a737c153840fad3, type: 3}
 --- !u!1 &1476018750
 GameObject:
   m_ObjectHideFlags: 0
