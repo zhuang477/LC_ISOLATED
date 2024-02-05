@@ -43,7 +43,6 @@ public class ItemDatabase : MonoBehaviour
                 {"Armor_Stanima_Cost",5},
             },
             new Dictionary<string, string>{
-                
             },
             new Dictionary<string,double>{
                 {"Armor_Head",50},
@@ -84,12 +83,11 @@ public class ItemDatabase : MonoBehaviour
 
             new Item(5, "Relos_Hoplite_Armor",AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Asset/itemIcon/Relos_Hoplite_UI.png"),
             AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Asset/Player/Inventory//PaperDoll/inv_model_5.png"),
-            "Armor","Hoplite armors equip br Relo's troops",
+            "Armor","Hoplite armors equip by Relo's troops",
             new Dictionary<string, int>{
                 {"Armor_Stanima_Cost",10},
             },
             new Dictionary<string, string>{
-                
             },
             new Dictionary<string,double>{
                 {"Armor_Head",50},
@@ -98,8 +96,9 @@ public class ItemDatabase : MonoBehaviour
             }),
             //
 
-            /**
-            new Item(1000,"Heroic", "Armor","You wear nothing, brave but risky",
+            //-----when no equippments-----
+            new Item(1000,"Heroic",null,
+            null,"Armor","You wear nothing, brave but risky",
             new Dictionary<string, int>{
                 {"Armor_Stanima_Cost",0},
             },
@@ -113,21 +112,34 @@ public class ItemDatabase : MonoBehaviour
             }),
             //
             
-
-            //
-            new Item(999, "Fist", "Weapon","Your fist",
+            new Item(999, "Fist",null,
+            null,"Weapon","Your fist",
             new Dictionary<string, int>{
                 {"Attack_Stanima",5}
             },
             new Dictionary<string, string>{
-                {"Weapon Type","Fist"}
+                {"Weapon Type","Fist"},
+                {"Weapon Hold", "1H"},
             },
             new Dictionary<string,double>{
                 {"Attack_Raw_Damage",2},
                 {"Attack_Against_Flesh",1},
                 {"Attack_Against_Armor",0}
             }),
-            */
+
+            //
+            new Item(998,"hand",null,
+            null,"Shield","Your hand, risky to block attack with it",
+            new Dictionary<string, int>{
+                {"Attack_Stanima",5}
+            },
+            new Dictionary<string, string>{
+                {"Shield_Type","No_Shield"}
+            },
+            new Dictionary<string,double>{
+                {"Shield_duration",0}
+            })
+            //-------------------------------
         };
     }
 

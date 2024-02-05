@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class IconID : MonoBehaviour
 {
-    public int ID;
+    //the item's database id.
+    public int ItemID;
+    //which slot this item in.
+    public int SlotID;
 }

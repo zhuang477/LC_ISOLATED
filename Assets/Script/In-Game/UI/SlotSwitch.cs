@@ -7,8 +7,10 @@ public class SlotSwitch : MonoBehaviour, IDropHandler
 {
 
     public void OnDrop(PointerEventData eventData){
-        GameObject dropped =eventData.pointerDrag;
-        DragAndDrop draggableItem =dropped.GetComponent<DragAndDrop>();
-        draggableItem.parentAfterDrag =transform;
+        if(transform.childCount ==0){
+            GameObject dropped =eventData.pointerDrag;
+            DragAndDrop draggableItem =dropped.GetComponent<DragAndDrop>();
+            draggableItem.parentAfterDrag =transform;
+        }
     }
 }
