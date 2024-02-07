@@ -74,13 +74,17 @@ public class MainMenu : MonoBehaviour
                     XP = 0,
                     hitpoint = 50,
                     stanima = 50,
+                    recovery =2,
+                    action_point =2,
 
                     weapon_id = 1,
                     armor_id = 2,
                     shield_id =3,
 
                     perks_unlocked = new List<int>(),
-                    debuff =new List<int>()
+                    debuff =new List<int>(),
+                    current_hitpoint =50,
+                    current_stanima =50
                 };
 
                     //backapck

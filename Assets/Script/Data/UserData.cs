@@ -35,8 +35,12 @@ public class UserData
         public double hitpoint;
         //stanima
         public int stanima;
+        public double recovery;
         //stanima after cost armor, SHOULD NOT BE DIRECTLY ASSIGN.
         public int actual_stanima;
+
+        //special action, such as dodge, parry, unique attack animation needs action point.
+        public int action_point;
 
         //the weapon that player holding.
         public int weapon_id;
@@ -59,5 +63,7 @@ public class UserData
 
     public List<int> debuff; //debuff can not only one.
 
-    //paperdoll(what player currently wear and hold)
+    //temporary status.
+    public double current_hitpoint;
+    public double current_stanima;
 }

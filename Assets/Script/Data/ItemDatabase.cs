@@ -5,6 +5,9 @@ using UnityEditor;
 
 public class ItemDatabase : MonoBehaviour
 {
+    //settings that directly affect by itemdatabase but needs to edit manually:
+    //InventoryUI -the data swap between UI and save.
+    //EquipSwap.cs -Player sprite(Armor/weapon)
     public List<Item> items =new List<Item>();
     void Awake(){
         BuildItemDatabase();
@@ -25,7 +28,8 @@ public class ItemDatabase : MonoBehaviour
             },
             new Dictionary<string, string>{
                 {"Weapon Type","Sword"},
-                {"Weapon Hold", "1H"}
+                {"Weapon Hold", "1H"},
+                {"Special Ability","Perceive"}
             },
             new Dictionary<string,double>{
                 {"Attack_Raw_Damage",50},
@@ -72,7 +76,8 @@ public class ItemDatabase : MonoBehaviour
             new Dictionary<string, string>{
                 {"Weapon Type","Polearm"},
                 {"Weapon Hold", "2H"},
-                {"Polearm Type","Pike"}
+                {"Polearm Type","Pike"},
+                {"Special Ability","Phalanx"}
             },
             new Dictionary<string,double>{
                 {"Attack_Raw_Damage",100},

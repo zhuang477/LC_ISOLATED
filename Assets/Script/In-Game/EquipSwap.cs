@@ -5,6 +5,8 @@ using UnityEngine.U2D.Animation;
 
 public class EquipSwap : MonoBehaviour
 {
+    //two methods used in this script: the swap of the armor/weapon
+    //and the swap of the weapon's colliderbox.
     public UserData save=null;
     public GameObject Player;
 
@@ -13,10 +15,25 @@ public class EquipSwap : MonoBehaviour
     public GameObject weapon;
     public GameObject shield;
 
+    public List<GameObject> WeaponCollider;
+    public int currentWeaponLocInCollider =0; 
+    //WeaponCollider:
+    // 0: Fist
+    // 1: GladSword
+    // 2: Pylongs
+    // 
+
+
     // Start is called before the first frame update
     void Start()
     {
         save =GameManager.Instance.currentSaving;
+        //weapon's collider will be handled with AttackEvent.cs
+        if(save !=null){
+            for(int i=0;i<WeaponCollider.Count;i++){
+                WeaponCollider[i].gameObject.SetActive(false);
+            }
+        }
     }
 
     // Update is called once per frame
@@ -49,8 +66,14 @@ public class EquipSwap : MonoBehaviour
     void WeaponSwap(){
         if(save !=null){
             int Weapon_id =save.weapon_id;
+            if(Weapon_id ==999){
+                weapon.GetComponent<SpriteResolver>().SetCategoryAndLabel(weapon.name,"default");
+                currentWeaponLocInCollider =0;
+                
+            }
             if(Weapon_id ==1){
                 weapon.GetComponent<SpriteResolver>().SetCategoryAndLabel(weapon.name,"GladSword");
+                currentWeaponLocInCollider =1;
             }
         }
     }

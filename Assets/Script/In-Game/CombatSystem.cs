@@ -15,24 +15,28 @@ public class CombatSystem : MonoBehaviour
 
     public Control control;
     [HideInInspector]public float rotZ;
+    public UserData save;
 
     // Update is called once per frame
     void Update()
     {
-        if(Player ==null){
+        save =GameManager.Instance.currentSaving;
+        if(save !=null){
+            if(Player ==null){
             Player =GameObject.Find("Player");
-        }else{
-            rotZ =control.rotZ;
-            if(Input.GetAxis("Mouse ScrollWheel") > 0f ) // forward
-            {
-                if(attackPos >AttackPos.Head){
-                    attackPos--;
+            }else{
+                rotZ =control.rotZ;
+                if(Input.GetAxis("Mouse ScrollWheel") > 0f ) // forward
+                {
+                    if(attackPos >AttackPos.Head){
+                        attackPos--;
+                    }
                 }
-            }
-            else if (Input.GetAxis("Mouse ScrollWheel") < 0f ) // backwards
-            {
-                if(attackPos <AttackPos.Leg){
-                    attackPos++;
+                else if (Input.GetAxis("Mouse ScrollWheel") < 0f ) // backwards
+                {
+                    if(attackPos <AttackPos.Leg){
+                        attackPos++;
+                    }
                 }
             }
         }
