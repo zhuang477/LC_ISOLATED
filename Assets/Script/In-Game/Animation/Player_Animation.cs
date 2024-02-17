@@ -79,6 +79,7 @@ public class Player_Animation : MonoBehaviour
         //swords and hammer can attack head and body, axe can only attack head(both 1H and 2H).
         //spears(both 1H and 2H) and polearms can attack all parts.
         if(save !=null && itemDatabase !=null){
+            //identify 1H or 2H
             if(itemDatabase.getItem(save.weapon_id).stats_stringTostring["Weapon Hold"].Equals("1H")){
                 animator.SetBool("1H",true);
                 animator.SetBool("2H",false);
@@ -87,6 +88,15 @@ public class Player_Animation : MonoBehaviour
                 animator.SetBool("2H",true);
                 animator.SetBool("1H",false);
             }
+
+            //identify how to hold weapon 
+            if(itemDatabase.getItem(save.weapon_id).stats_stringTostring["Weapon Type"].Equals("Polearm")){
+                animator.SetBool("Polearm",true);
+            }
+            if(!itemDatabase.getItem(save.weapon_id).stats_stringTostring["Weapon Type"].Equals("Polearm")){
+                animator.SetBool("Polearm",false);
+            }
+
         }
     }
     void RightHand(){

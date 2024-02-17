@@ -23,6 +23,7 @@ public class EquipSwap : MonoBehaviour
     // 2: Pylongs
     // 
 
+    public bool shouldColliderActive =false;
 
     // Start is called before the first frame update
     void Start()
@@ -39,9 +40,28 @@ public class EquipSwap : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(shouldColliderActive ==false){
+
+        }
         ArmorSwap();
         WeaponSwap();
         ShieldSwap();
+    }
+
+    void OnEnable(){
+        //from draganddrop.cs
+        DragAndDrop.disableCollider +=DisableColliderOnWeaponSwitch;
+    }
+    
+    void OnDisable(){
+        //from draganddrop.cs
+        DragAndDrop.disableCollider -=DisableColliderOnWeaponSwitch;
+    }
+
+    void DisableColliderOnWeaponSwitch(){
+        for(int i=0;i<WeaponCollider.Count;i++){
+            WeaponCollider[i].gameObject.SetActive(false);
+        }
     }
 
     void ArmorSwap(){
@@ -75,12 +95,19 @@ public class EquipSwap : MonoBehaviour
                 weapon.GetComponent<SpriteResolver>().SetCategoryAndLabel(weapon.name,"GladSword");
                 currentWeaponLocInCollider =1;
             }
+            if(Weapon_id ==4){
+                weapon.GetComponent<SpriteResolver>().SetCategoryAndLabel(weapon.name,"Pylongs_Pike");
+                currentWeaponLocInCollider =2;
+            }
         }
     }
 
     void ShieldSwap(){
         if(save !=null){
             int Shield_id =save.shield_id;
+            if(Shield_id ==998){
+                shield.GetComponent<SpriteResolver>().SetCategoryAndLabel(shield.name,"default");
+            }
             if(Shield_id ==3){
                 shield.GetComponent<SpriteResolver>().SetCategoryAndLabel(shield.name,"GladShield");
             }

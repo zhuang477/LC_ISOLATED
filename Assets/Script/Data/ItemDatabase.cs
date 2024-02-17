@@ -24,7 +24,7 @@ public class ItemDatabase : MonoBehaviour
             AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Asset/Player/Inventory/PaperDoll/inv_model_1.png"),
             "Weapon","A Gladiator_Sword",
             new Dictionary<string, int>{
-                {"Attack_Stanima",10}
+                {"Attack_Stanima_Cost",10}
             },
             new Dictionary<string, string>{
                 {"Weapon Type","Sword"},
@@ -71,7 +71,7 @@ public class ItemDatabase : MonoBehaviour
             AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Asset/Player/Inventory//PaperDoll/inv_model_4.png"),
             "Weapon","A quite long pike that use in Phalanx, firstly use by Companion Relos' troops",
             new Dictionary<string, int>{
-                {"Attack_Stanima",20}
+                {"Attack_Stanima_Cost",20}
             },
             new Dictionary<string, string>{
                 {"Weapon Type","Polearm"},
@@ -120,7 +120,7 @@ public class ItemDatabase : MonoBehaviour
             new Item(999, "Fist",null,
             null,"Weapon","Your fist",
             new Dictionary<string, int>{
-                {"Attack_Stanima",5}
+                {"Attack_Stanima_Cost",5}
             },
             new Dictionary<string, string>{
                 {"Weapon Type","Fist"},
@@ -136,7 +136,6 @@ public class ItemDatabase : MonoBehaviour
             new Item(998,"hand",null,
             null,"Shield","Your hand, risky to block attack with it",
             new Dictionary<string, int>{
-                {"Attack_Stanima",5}
             },
             new Dictionary<string, string>{
                 {"Shield_Type","No_Shield"}

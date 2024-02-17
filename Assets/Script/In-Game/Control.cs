@@ -35,6 +35,9 @@ public class Control : MonoBehaviour
         //public static event Action Tele;
         public static event Action IsPicked;
 
+        public static event Action Phan_Attack;
+        public static event Action Stop_Phan_Attack;
+
 
     // Update is called once per frame
     void Update()
@@ -88,10 +91,16 @@ public class Control : MonoBehaviour
             if(SpineRotating !=null){
                 SpineRotating();
             }
+            if(Phan_Attack !=null){
+                Phan_Attack();
+            }
         }
         if(Input.GetKeyUp(KeyCode.Mouse1)){
             if(StopSpineRotating !=null){
                 StopSpineRotating();
+            }
+            if(Stop_Phan_Attack !=null){
+                Stop_Phan_Attack();
             }
         }
     }

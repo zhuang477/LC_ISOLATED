@@ -39,8 +39,9 @@ public class GameManager : MonoBehaviour
             currentSaving.weapon_against_flesh =Weapon.stats_stringTodouble["Attack_Raw_Damage"] * Weapon.stats_stringTodouble["Attack_Against_Flesh"];
             currentSaving.weapon_against_armor =Weapon.stats_stringTodouble["Attack_Raw_Damage"] * Weapon.stats_stringTodouble["Attack_Against_Armor"];
 
-
             currentSaving.actual_stanima =currentSaving.stanima -Armor.stats_stringToint["Armor_Stanima_Cost"];
+            currentSaving.weapon_attack_stanima_cost =Weapon.stats_stringToint["Attack_Stanima_Cost"];
+
             currentSaving.armor_head =Armor.stats_stringTodouble["Armor_Head"];
             currentSaving.armor_torso =Armor.stats_stringTodouble["Armor_Torso"];
             currentSaving.armor_leg =Armor.stats_stringTodouble["Armor_Leg"];

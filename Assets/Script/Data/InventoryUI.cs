@@ -33,6 +33,7 @@ public class InventoryUI : MonoBehaviour
     bool BackPackInit;
 
     // Update is called once per frame
+    //items have slotID, which needs to assign manually.
     void Update()
     {
         save =GameManager.Instance.currentSaving;
@@ -142,6 +143,21 @@ public class InventoryUI : MonoBehaviour
                     }
                 }
             }**/
+
+            //if 2H, automatically put the shield into backpack.
+            if(itemDatabase.getItem(save.weapon_id).stats_stringTostring["Weapon Type"].Equals("Polearm")){
+                if(Equipping_ShieldSlot.transform.childCount !=0){
+                    int i =0;
+                    for(int j=0;j<SlotList.Count;j++){
+                        if(SlotList[j].transform.childCount ==0){
+                            i =j;
+                            break;
+                        }
+                    }
+                    Equipping_ShieldSlot.transform.GetChild(0).GetComponent<IconID>().SlotID =i;
+                    Equipping_ShieldSlot.transform.GetChild(0).SetParent(SlotList[i].transform);
+                }
+            }
 
             //setting mask.
             GridAndIconPlaced.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical,-posY+50f);

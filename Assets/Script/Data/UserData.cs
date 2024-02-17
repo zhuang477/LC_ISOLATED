@@ -44,6 +44,7 @@ public class UserData
 
         //the weapon that player holding.
         public int weapon_id;
+        public int weapon_attack_stanima_cost;
         public double weapon_against_flesh;
         public double weapon_against_armor;
         //the armor that player wearing.
@@ -66,4 +67,5 @@ public class UserData
     //temporary status.
     public double current_hitpoint;
     public double current_stanima;
+    public double current_recovery;
 }

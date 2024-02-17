@@ -11,11 +11,17 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler ,IEndD
     [HideInInspector] public Transform parentAfterDrag;
     //UserData save =GameManager.Instance.currentSaving;
     //ItemDatabase itemDatabase =GameManager.Instance.itemDatabase;
+
+    public delegate void DisableCollider();
+    public static event DisableCollider disableCollider;
     public void OnBeginDrag(PointerEventData eventData){
         parentAfterDrag =transform.parent;
         transform.SetParent(transform.root);
         transform.SetAsLastSibling();
         image.raycastTarget =false;
+        if(disableCollider !=null){
+            disableCollider();
+        }
     }
 
     public void OnDrag(PointerEventData eventData){

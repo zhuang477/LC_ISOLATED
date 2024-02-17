@@ -83,8 +83,11 @@ public class MainMenu : MonoBehaviour
 
                     perks_unlocked = new List<int>(),
                     debuff =new List<int>(),
+                    
+                    //this value can be assign here since this part is init the save.
                     current_hitpoint =50,
-                    current_stanima =50
+                    current_stanima =50,
+                    current_recovery =2,
                 };
 
                     //backapck
