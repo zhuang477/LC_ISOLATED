@@ -38,7 +38,6 @@ public class Control : MonoBehaviour
         public static event Action Phan_Attack;
         public static event Action Stop_Phan_Attack;
 
-
     // Update is called once per frame
     void Update()
     {
@@ -151,6 +150,12 @@ public class Control : MonoBehaviour
             PlayerRB.MovePosition(PlayerRB.position + PlayerPos * moveSpeed * Time.fixedDeltaTime);
         }
     }
+
+    //use playerRB to detect conversation collider.
+    void StartDialogue(){
+        
+    }
+
 
     //Make camera follow player
     public UnityEngine.Vector3 Cameraoffset;
