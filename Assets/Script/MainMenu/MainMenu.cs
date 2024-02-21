@@ -88,6 +88,7 @@ public class MainMenu : MonoBehaviour
                     current_hitpoint =50,
                     current_stanima =50,
                     current_recovery =2,
+                    current_Dialogue =null
                 };
 
                     //backapck

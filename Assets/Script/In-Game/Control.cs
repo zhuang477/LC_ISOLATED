@@ -38,6 +38,9 @@ public class Control : MonoBehaviour
         public static event Action Phan_Attack;
         public static event Action Stop_Phan_Attack;
 
+        public delegate void DialogueRelate();
+        public static event DialogueRelate EnableDialogueEvent;
+
     // Update is called once per frame
     void Update()
     {
@@ -59,6 +62,7 @@ public class Control : MonoBehaviour
                     Squat();
                     //Teleport();
                     PickUpItem();
+                    StartDialogue();
                 }
             
             }
@@ -153,7 +157,14 @@ public class Control : MonoBehaviour
 
     //use playerRB to detect conversation collider.
     void StartDialogue(){
-        
+        if(save.current_Dialogue !=null){
+            if(Input.GetKeyDown(KeyCode.G)){
+                if(EnableDialogueEvent !=null){
+                    EnableDialogueEvent();
+                }
+            }
+        }
+        //disable dialogue will be done by continue button in dialogue box.
     }
 
 

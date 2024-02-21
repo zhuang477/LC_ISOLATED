@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
+//this is a transport station.
 public class GameManager : MonoBehaviour
 {
     //This is use to store the player's current info and player control.

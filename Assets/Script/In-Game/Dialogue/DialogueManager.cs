@@ -10,53 +10,60 @@ public class DialogueManager : MonoBehaviour
     public TMP_Text nameText;
     public TMP_Text dialogueText;
 
+    public GameObject DialogueTrigger;
     public GameObject DialogueBox;
 
     private Queue<string> sentences;
 
+    UserData save;
+
     // Start is called before the first frame update
     void Start()
     {
+        save =GameManager.Instance.currentSaving;
         sentences =new Queue<string>();
     }
 
     void OnEnable(){
-        DialogueColliderDetect.EnableDialogueEvent +=DialogueActivate;
-        DialogueColliderDetect.DisableDialogueEvent +=DialogueDeactivate;
+        Control.EnableDialogueEvent +=DialogueActivate;
     }
 
     void OnDisable(){
-        DialogueColliderDetect.EnableDialogueEvent -=DialogueActivate;
-        DialogueColliderDetect.DisableDialogueEvent -=DialogueDeactivate;
+        Control.EnableDialogueEvent -=DialogueActivate;
     }
 
     void DialogueActivate(){
         DialogueBox.SetActive(true);
+        StartDialogue(save.current_Dialogue.dialogue);
     }
 
     void DialogueDeactivate(){
         DialogueBox.SetActive(false);
     }
 
-    public void StartDialogue (Dialogue dialogue){
-        nameText.text =dialogue.npc_name;
-        sentences.Clear();
+    public void StartDialogue(Dialogue dialogue){
+        if(save.current_Dialogue !=null){
+            nameText.text =save.current_Dialogue.dialogue.npc_name;
+            sentences.Clear();
 
-        foreach(string sentence in dialogue.sentences){
-            sentences.Enqueue(sentence);
+            foreach(string sentence in dialogue.sentences){
+                sentences.Enqueue(sentence);
+            }
+            DisplayNextSentence();
         }
-        DisplayNextSentence();
     }
 
     public void DisplayNextSentence(){
-        if(sentences.Count ==0){
-            EndDialogue();
-            return;
+        if(save.current_Dialogue !=null){
+            //end of queue.
+            if(sentences.Count ==0){
+                EndDialogue();
+                return;
+            }
         }
-        string sentence =sentences.Dequeue();
-        dialogueText.text =sentence;
     }
 
+    //not sure how to use this one yet, maybe change the "countinue" to "end"?
     void EndDialogue(){
 
     }

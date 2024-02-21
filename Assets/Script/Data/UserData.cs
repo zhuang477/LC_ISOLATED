@@ -68,4 +68,5 @@ public class UserData
     public double current_hitpoint;
     public double current_stanima;
     public double current_recovery;
+    public DialogueTrigger current_Dialogue;
 }
